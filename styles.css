@@ -32,5 +32,43 @@ input[type=number] {
 }
 
 .bgwhite{
-    background-color: purple;
+    background-color: white;
+}
+td:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: crosshair;
+}
+
+.eraseoff{
+    background-color: palevioletred; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+.eraseon{
+    background-color: aqua;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+#gridSubmit{
+    background-color: palevioletred; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
 }

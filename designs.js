@@ -46,11 +46,16 @@ var makeGrid = function() {
 };
 
 var eraser = false;
-$("#delete").on("click", function(){
-    if(eraser){
-        eraser=false;
-    } else{
+$(".eraser").on("click", function(){
+    if($(this).hasClass("eraseoff")){
         eraser=true;
+        $(".eraser").removeClass("eraseoff");
+        $(".eraser").addClass("eraseon");
+    } else{
+        eraser=false;
+        $(".eraser").removeClass("eraseon");
+        $(".eraser").addClass("eraseoff");
+        //$("#eraser").removeClass("eraseoff");
     }
 });
 
