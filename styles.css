@@ -29,6 +29,11 @@ table {
 
 input[type=number] {
     width: 6em;
+    
+}
+
+input[type=number]:focus {
+    background-color: lightskyblue;
 }
 
 .bgwhite{
@@ -39,8 +44,17 @@ td:hover{
     cursor: crosshair;
 }
 
-.eraseoff{
-    background-color: palevioletred; /* Green */
+.text-content{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-100%);
+    width: 100%;
+    text-align: center;
+}
+
+.eraser{
+    background-color: forestgreen; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -50,16 +64,24 @@ td:hover{
     font-size: 16px;
     border-radius: 8px;
 }
-.eraseon{
-    background-color: aqua;
-    border: none;
+
+#sizePicker{
+    background-color: #4CAF50; /* Green */
+    border: 1px solid green;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    border-radius: 8px;
+    cursor: pointer;
+    width: 600px;
+    display: block;
+    margin: auto;
+    font-family: cursive;
+}
+.eraseron{
+    background-color: orangered;
 }
 #gridSubmit{
     background-color: palevioletred; /* Green */
@@ -71,4 +93,16 @@ td:hover{
     display: inline-block;
     font-size: 16px;
     border-radius: 8px;
+}
+.btngroup{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+}
+
+.btngroup .button:hover {
+    background-color: #3e8e41;
 }

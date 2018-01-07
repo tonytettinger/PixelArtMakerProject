@@ -7,22 +7,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1>Lab: Pixel Art Maker</h1>
+    <div >
+    <img src="https://1onjea25cyhx3uvxgs4vu325-wpengine.netdna-ssl.com/wp-content/themes/udacity_wp_1_8/images/udacity_mark.png" width="800px" height="=300px">
+    <h1 class='text-content'>Lab: Pixel Art Maker</h1>
+    
 
     <h2>Choose Grid Size</h2>
+    
     <form id="sizePicker">
         Grid Height:
         <input type="number" id="input_height" name="height" min="1" value="1">
         Grid Width:
         <input type="number" id="input_width" name="width" min="1" value="1">
-        <input type="submit" id="gridSubmit">
-        <button class="button eraseoff" id="eraser">Erase Cells</button>
-
+        <div class="btngroup">
+            <input type="submit" id="gridSubmit" class="button">
+            <button id="eraserButton" class="eraser button">Eraser: OFF</button>
+        </div>
     </form>
 
     <h2>Pick A Color</h2>
+        
     <input type="color" id="colorPicker">
-
+        
+    </div>
+    
     <h2>Design Canvas</h2>
     <table id="pixel_canvas"></table>
 
