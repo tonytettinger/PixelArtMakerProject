@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-let mouseDown = false;
+var mouseDown = false;
 
 //Keeps track and stores the value referring to the mouse button position (up/down).
 $(document.body)
