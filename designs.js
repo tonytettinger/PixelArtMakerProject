@@ -15,7 +15,7 @@ $(document.body)
 $("#eraserButton").click(function(){
     event.preventDefault();
     $(this).toggleClass("eraseron");
-      $(this).text(function(text){
+      $(this).text(function(i,text){
           return text === "Eraser: ON" ? "Eraser: OFF" : "Eraser: ON";
       })
    });
