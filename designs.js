@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-var mouseDown = false;
+let mouseDown = false;
 
 //Keeps track and stores the value referring to the mouse button position (up/down).
 $(document.body)
@@ -40,18 +40,18 @@ detailed pictures easier. For this  Math.pow() function is included, which scale
 in case of one single cell to about 9px in the case of maximum allowed 70x70 cells.
 */
 
-var makeGrid = function() {
-    var rows = $("#input_height").val();
-    var columns = $("#input_width").val();
-    var canvas =$("#pixel_canvas");
-    var rowcol = rows*columns;
-    var power = Math.pow(0.99972, rowcol);
-    var side = (36 * power)+"px";
+let makeGrid = function() {
+    let rows = $("#input_height").val();
+    let columns = $("#input_width").val();
+    let canvas =$("#pixel_canvas");
+    let rowcol = rows*columns;
+    let power = Math.pow(0.99972, rowcol);
+    let side = (36 * power)+"px";
     $("td").remove();
     $("tr").remove();
-    for(var i =1; i <= rows; i++){
+    for(let i =1; i <= rows; i++){
         canvas.append("<tr></tr>");
-        for(var j=1; j <= columns; j++){
+        for(let j=1; j <= columns; j++){
             $("#pixel_canvas tr:last").append("<td class='cell bgwhite'></td>");
   }
     $("tr").height(side);
@@ -64,7 +64,7 @@ First it checks if the eraser button is on, in that case it paints the cells whi
 If it's off it changes the background to the color selected by colorpicker
 */
 $("#pixel_canvas").on("click", "td", function(){
-    var colorPicked=$("#colorPicker").val();
+    let colorPicked=$("#colorPicker").val();
         if ($("#eraserButton").hasClass("eraseron")){
             $(this).css("background-color", "#FFFFFF");
         }else{
@@ -74,7 +74,7 @@ $("#pixel_canvas").on("click", "td", function(){
     
 //Painting the cells if movement is continuous with mouse button pushed down.
 $("#pixel_canvas").on("mouseover", "td", function(){
-    var colorPicked=$("#colorPicker").val();
+    let colorPicked=$("#colorPicker").val();
     if(mouseDown){
         if ($("#eraserButton").hasClass("eraseron")){
             $(this).css("background-color", "#FFFFFF");
