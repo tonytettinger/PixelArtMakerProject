@@ -45,7 +45,7 @@ input[type=number]:focus {
 }
 td:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=105604), auto;
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=1635), auto;
 }
 
 .text-content{
@@ -58,7 +58,7 @@ td:hover{
 }
 
 .eraser{
-    background-color: forestgreen; /* Green */
+    background-color: dimgrey; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -79,9 +79,6 @@ td:hover{
 }
 
 #sizePicker{
-    background-color: #4CAF50; /* Green */
-    border: 1px solid green;
-    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -97,7 +94,7 @@ td:hover{
     background-color: orangered;
 }
 #gridSubmit{
-    background-color: palevioletred; /* Green */
+    background-color: mediumblue;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -113,8 +110,4 @@ td:hover{
     cursor: pointer;
     display: block;
     margin-top: 20px;
-}
-
-.btngroup .button:hover {
-    background-color: #3e8e41;
 }
