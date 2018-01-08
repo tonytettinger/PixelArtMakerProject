@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    background-color: greenyellow;
 }
 
 h1 {
@@ -36,12 +37,15 @@ input[type=number]:focus {
     background-color: lightskyblue;
 }
 
+.controls{
+    font-family: "Lucida Bright", cursive, sans-serif;
+}
 .bgwhite{
     background-color: white;
 }
 td:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    cursor: crosshair;
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=105604), auto;
 }
 
 .text-content{
@@ -65,6 +69,15 @@ td:hover{
     border-radius: 8px;
 }
 
+.gridDefine{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-2%);
+    width: 100%;
+    text-align: center;
+}
+
 #sizePicker{
     background-color: #4CAF50; /* Green */
     border: 1px solid green;
@@ -75,10 +88,10 @@ td:hover{
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
-    width: 600px;
+    width: auto;
     display: block;
     margin: auto;
-    font-family: cursive;
+    font-family:  "Lucida console", cursive, sans-serif;
 }
 .eraseron{
     background-color: orangered;
@@ -96,7 +109,6 @@ td:hover{
 }
 .btngroup{
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     cursor: pointer;
     display: block;
