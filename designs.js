@@ -1,6 +1,12 @@
 $(document).ready(function () {
 
+    
 var mouseDown = false;
+let canvas = $("#pixel_canvas");
+let eraserButton = $("#eraserButton"); 
+let colorPicker = $("#colorPicker");
+let height= $("#input_height");
+let width= $("#input_width");
 
 //Keeps track and stores the value referring to the mouse button position (up/down).
 $(document.body)
@@ -12,7 +18,7 @@ $(document.body)
     });
 
 //Changes the status of the eraser button, used to make cells white.
-$("#eraserButton").click(function(){
+colorPicker.click(function(){
     event.preventDefault();
     $(this).toggleClass("eraseron");
       $(this).text(function(i,text){
@@ -27,7 +33,7 @@ drawing.
 */
 $("#gridSubmit").on("click",function(event){
     event.preventDefault();
-    if($("#input_height").val() >= 1 && $("#input_height").val() <= 70 && $("#input_width").val() <= 70 && $("#input_width").val() >= 1){
+    if(height.val() >= 1 && height.val() <= 70 && width.val() <= 70 && width.val() >= 1){
     makeGrid();
     }else{
         return alert("For optimal user experience, please enter a value between 0 and 70 for Grid Height and Grid Width!")
@@ -41,9 +47,8 @@ in case of one single cell to about 9px in the case of maximum allowed 70x70 cel
 */
 
 let makeGrid = function() {
-    let rows = $("#input_height").val();
-    let columns = $("#input_width").val();
-    let canvas =$("#pixel_canvas");
+    let rows = height.val();
+    let columns = width.val();
     let rowcol = rows*columns;
     let power = Math.pow(0.99972, rowcol);
     let side = (36 * power)+"px";
@@ -63,9 +68,9 @@ let makeGrid = function() {
 First it checks if the eraser button is on, in that case it paints the cells white.
 If it's off it changes the background to the color selected by colorpicker
 */
-$("#pixel_canvas").on("click", "td", function(){
-    let colorPicked=$("#colorPicker").val();
-        if ($("#eraserButton").hasClass("eraseron")){
+canvas.on("click", "td", function(){
+    let colorPicked=colorPicker.val();
+        if (eraserButton.hasClass("eraseron")){
             $(this).css("background-color", "#FFFFFF");
         }else{
             $(this).css("background-color", colorPicked);
@@ -73,10 +78,10 @@ $("#pixel_canvas").on("click", "td", function(){
 });
     
 //Painting the cells if movement is continuous with mouse button pushed down.
-$("#pixel_canvas").on("mouseover", "td", function(){
-    let colorPicked=$("#colorPicker").val();
+canvas.on("mouseover", "td", function(){
+    let colorPicked=colorPicker.val();
     if(mouseDown){
-        if ($("#eraserButton").hasClass("eraseron")){
+        if (eraserButton.hasClass("eraseron")){
             $(this).css("background-color", "#FFFFFF");
         }else{
             $(this).css("background-color", colorPicked);
