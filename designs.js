@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
-    
+
 var mouseDown = false;
 let canvas = $("#pixel_canvas");
-let eraserButton = $("#eraserButton"); 
+let eraserButton = $("#eraserButton");
 let colorPicker = $("#colorPicker");
 let height= $("#input_height");
 let width= $("#input_width");
@@ -18,7 +18,7 @@ $(document.body)
     });
 
 //Changes the status of the eraser button, used to make cells white.
-colorPicker.click(function(){
+eraserButton.click(function(){
     event.preventDefault();
     $(this).toggleClass("eraseron");
       $(this).text(function(i,text){
@@ -63,7 +63,7 @@ let makeGrid = function() {
     $("td").width(side);
   }
 };
-    
+
 /*Painting function if clicked on a cell, it fills cell with the selected color.
 First it checks if the eraser button is on, in that case it paints the cells white.
 If it's off it changes the background to the color selected by colorpicker
@@ -76,7 +76,7 @@ canvas.on("click", "td", function(){
             $(this).css("background-color", colorPicked);
     }
 });
-    
+
 //Painting the cells if movement is continuous with mouse button pushed down.
 canvas.on("mouseover", "td", function(){
     let colorPicked=colorPicker.val();
